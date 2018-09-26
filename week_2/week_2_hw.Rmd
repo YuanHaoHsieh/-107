@@ -1,0 +1,23 @@
+---
+title: "week_2_hw"
+output: html_document
+---
+這是以知名插畫社群pixiv
+作為對象所做的爬蟲（？）
+在指定搜尋關鍵詞的情況下
+挑出搜尋結果的標題及連結
+然後我不知道為什麼日文亂碼了
+
+```{r setup, include=T}
+library(rvest)
+url<- "https://www.pixiv.net/tags.php?tag=%E8%89%A6%E3%81%93%E3%82%8C"
+dat<- read_html(url)
+rdat<- html_nodes(dat, ".image-item")
+srdat<- html_attr(html_nodes(dat, ".image-item a"), 'href')
+ssrdat<- html_text(rdat)
+for(x in 1:9)
+{
+  cat(ssrdat[x], "\n", srdat[3*x-2], "\n",  srdat[3*x], "\n")
+}
+```
+
