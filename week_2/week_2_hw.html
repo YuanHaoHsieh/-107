@@ -126,7 +126,8 @@ $(document).ready(function () {
 
 
 <p>這是以知名插畫社群pixiv 作為對象所做的爬蟲（？） 在指定搜尋關鍵詞的情況下 挑出搜尋結果的標題及連結 然後我不知道為什麼日文亂碼了</p>
-<pre class="r"><code>library(rvest)</code></pre>
+<pre class="r"><code>options(Encoding=&quot;UTF-8&quot;)
+library(rvest)</code></pre>
 <pre><code>## Loading required package: xml2</code></pre>
 <pre class="r"><code>url&lt;- &quot;https://www.pixiv.net/tags.php?tag=%E8%89%A6%E3%81%93%E3%82%8C&quot;
 dat&lt;- read_html(url)
@@ -137,33 +138,33 @@ for(x in 1:9)
 {
   cat(ssrdat[x], &quot;\n&quot;, srdat[3*x-2], &quot;\n&quot;,  srdat[3*x], &quot;\n&quot;)
 }</code></pre>
-<pre><code>## 小&lt;U+3055&gt;&lt;U+306A&gt;珍&lt;U+7363&gt;現&lt;U+308B&gt;&lt;U+3063&gt;！！Y.Y &lt;U+3067&gt;&lt;U+3093&gt;&lt;U+3062&gt;&lt;U+3083&gt;&lt;U+3089&gt;&lt;U+3059&gt; 
-##  /member_illust.php?mode=medium&amp;illust_id=70890239 
-##  /member.php?id=6897215 
-## &lt;U+30AF&gt;&lt;U+30EC&gt;&lt;U+30FC&gt;&lt;U+30D7&gt;&lt;U+3092&gt;食&lt;U+3079&gt;&lt;U+308B&gt;&lt;U+30A8&gt;&lt;U+30F3&gt;&lt;U+30BF&gt;&lt;U+30FC&gt;&lt;U+30D7&gt;&lt;U+30E9&gt;&lt;U+30A4&gt;&lt;U+30BA&gt;&lt;U+3068&gt;&lt;U+30D4&gt;&lt;U+30B6&gt;&lt;U+3092&gt;食&lt;U+3079&gt;&lt;U+308B&gt;&lt;U+30A2&gt;&lt;U+30AF&gt;&lt;U+30A3&gt;&lt;U+30E9&gt;&lt;U+732B&gt;&lt;U+30D5&gt;&lt;U+30E9&gt;&lt;U+30F3&gt; 
-##  /member_illust.php?mode=medium&amp;illust_id=70889858 
-##  /member.php?id=22679619 
-## &lt;U+3044&gt;&lt;U+3051&gt;&lt;U+308B&gt;&lt;U+304B&gt;&lt;U+3057&gt;&lt;U+3089&gt;？魔人ＧＯ！ 
-##  /member_illust.php?mode=medium&amp;illust_id=70889531 
-##  /member.php?id=24470 
-## 私&lt;U+304C&gt;&lt;U+304D&gt;&lt;U+3063&gt;&lt;U+3068&gt;、&lt;U+3084&gt;&lt;U+3063&gt;&lt;U+3064&gt;&lt;U+3051&gt;&lt;U+3061&gt;&lt;U+3083&gt;&lt;U+3046&gt;&lt;U+3093&gt;&lt;U+3060&gt;&lt;U+304B&gt;&lt;U+3089&gt;！&lt;U+3060&gt;&lt;U+3044&gt;&lt;U+3080&gt; 
-##  /member_illust.php?mode=medium&amp;illust_id=70889446 
-##  /member.php?id=2430436 
-## 私服風雲喪屋&lt;U+3086&gt;&lt;U+3046&gt; 
-##  /member_illust.php?mode=medium&amp;illust_id=70888766 
-##  /member.php?id=205813 
-## 艦&lt;U+3053&gt;&lt;U+308C&gt;漫&lt;U+753B&gt;「史上最大&lt;U+306E&gt;深海棲艦殲滅&lt;U+30BB&gt;&lt;U+30E8&gt;」５７&lt;U+30BB&gt;&lt;U+30FC&gt;&lt;U+30AC&gt;&lt;U+30F3&gt;◇&lt;U+30DE&gt;&lt;U+30A4&gt;&lt;U+30D4&gt;&lt;U+30AF&gt;&lt;U+3055&gt;&lt;U+3093&gt;募集中 
-##  /member_illust.php?mode=medium&amp;illust_id=70888692 
-##  /member.php?id=704149 
-## &lt;U+3061&gt;&lt;U+3083&gt;&lt;U+3093&gt;&lt;U+3068&gt;！！！！！！！！聞&lt;U+304D&gt;&lt;U+306A&gt;&lt;U+3055&gt;&lt;U+3044&gt;&lt;U+3063&gt;&lt;U+305F&gt;&lt;U+3089&gt;&lt;U+3041&gt;&lt;U+3063&gt;！！！！！！！！！！&lt;U+30DF&gt;&lt;U+30C1&gt;&lt;U+30B6&gt;&lt;U+30CD&gt;@金曜東&lt;U+30E6&gt;-10a 
-##  /member_illust.php?mode=medium&amp;illust_id=70888650 
-##  /member.php?id=13899185 
-## &lt;U+3057&gt;&lt;U+3050&gt;&lt;U+3057&gt;&lt;U+3050&gt;&lt;U+30C9&gt;&lt;U+30EA&gt;&lt;U+30C3&gt;&lt;U+30D7&gt;_02&lt;U+3042&gt;&lt;U+3081&gt; 
-##  /member_illust.php?mode=medium&amp;illust_id=70888627 
-##  /member.php?id=7471836 
-## HibikiDy_kai 
-##  /member_illust.php?mode=medium&amp;illust_id=70888339 
-##  /member.php?id=28093785</code></pre>
+<pre><code>## &lt;U+30F2&gt;&lt;U+30B3&gt;&lt;U+30C0&gt;&lt;U+30DE&gt;＠新刊、既刊委託中 
+##  /member_illust.php?mode=medium&amp;illust_id=48456097 
+##  /member.php?id=278495 
+## 島風&lt;U+3067&gt;&lt;U+3059&gt;！茨乃＠1日目東A-16a 
+##  /member_illust.php?mode=medium&amp;illust_id=40761380 
+##  /member.php?id=67388 
+## 空母棲&lt;U+59EB&gt;Nine 
+##  /member_illust.php?mode=medium&amp;illust_id=45464867 
+##  /member.php?id=3875056 
+## 艦&lt;U+3053&gt;&lt;U+308C&gt;漫&lt;U+753B&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年8月)810 
+##  /member_illust.php?mode=medium&amp;illust_id=70895822 
+##  /member.php?id=34709596 
+## 艦&lt;U+3053&gt;&lt;U+308C&gt;漫&lt;U+753B&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年7月)810 
+##  /member_illust.php?mode=medium&amp;illust_id=70895799 
+##  /member.php?id=34709596 
+## 艦&lt;U+3053&gt;&lt;U+308C&gt;&lt;U+30EF&gt;&lt;U+30F3&gt;&lt;U+30C9&gt;&lt;U+30ED&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年8月)810 
+##  /member_illust.php?mode=medium&amp;illust_id=70895760 
+##  /member.php?id=34709596 
+## &lt;U+3084&gt;&lt;U+307E&gt;&lt;U+3050&gt;&lt;U+3082&gt;&lt;U+3050&gt;&lt;U+3082&gt;&lt;U+3050&gt;810 
+##  /member_illust.php?mode=medium&amp;illust_id=70895743 
+##  /member.php?id=34709596 
+## 落書&lt;U+304D&gt;敷波&lt;U+3061&gt;&lt;U+3083&gt;&lt;U+3093&gt;ChuChu&lt;U+305F&gt;&lt;U+3053&gt; 
+##  /member_illust.php?mode=medium&amp;illust_id=70895697 
+##  /member.php?id=8052985 
+## 艦&lt;U+3053&gt;&lt;U+308C&gt;&lt;U+30EF&gt;&lt;U+30F3&gt;&lt;U+30C9&gt;&lt;U+30ED&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年6月)810 
+##  /member_illust.php?mode=medium&amp;illust_id=70895688 
+##  /member.php?id=34709596</code></pre>
 
 
 

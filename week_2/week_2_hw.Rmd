@@ -9,6 +9,7 @@ output: html_document
 然後我不知道為什麼日文亂碼了
 
 ```{r setup, include=T}
+options(Encoding="UTF-8")
 library(rvest)
 url<- "https://www.pixiv.net/tags.php?tag=%E8%89%A6%E3%81%93%E3%82%8C"
 dat<- read_html(url)
