@@ -9,7 +9,7 @@ srdat
 ssrdat<- html_text(rdat)
 ssrdat
 
-for(x in 1:9)
+for(x in 4:12)
 {
   cat(ssrdat[x], "\n", srdat[3*x-2], "\n",  srdat[3*x], "\n")
 }

@@ -134,19 +134,13 @@ dat&lt;- read_html(url)
 rdat&lt;- html_nodes(dat, &quot;.image-item&quot;)
 srdat&lt;- html_attr(html_nodes(dat, &quot;.image-item a&quot;), 'href')
 ssrdat&lt;- html_text(rdat)
-for(x in 1:9)
+for(x in 4:12)
 {
   cat(ssrdat[x], &quot;\n&quot;, srdat[3*x-2], &quot;\n&quot;,  srdat[3*x], &quot;\n&quot;)
 }</code></pre>
-<pre><code>## &lt;U+30F2&gt;&lt;U+30B3&gt;&lt;U+30C0&gt;&lt;U+30DE&gt;＠新刊、既刊委託中 
-##  /member_illust.php?mode=medium&amp;illust_id=48456097 
-##  /member.php?id=278495 
-## 島風&lt;U+3067&gt;&lt;U+3059&gt;！茨乃＠1日目東A-16a 
-##  /member_illust.php?mode=medium&amp;illust_id=40761380 
-##  /member.php?id=67388 
-## 空母棲&lt;U+59EB&gt;Nine 
-##  /member_illust.php?mode=medium&amp;illust_id=45464867 
-##  /member.php?id=3875056 
+<pre><code>## &lt;U+3057&gt;&lt;U+304D&gt;&lt;U+306A&gt;&lt;U+3059&gt;&lt;U+3055&gt;&lt;U+3093&gt;&lt;U+3068&gt;&lt;U+6226&gt;&lt;U+95D8&gt;中敷波美&lt;U+6D5C&gt;　&lt;U+30D4&gt;&lt;U+30ED&gt;&lt;U+30EA&gt;&lt;U+30F3&gt;　麻知 
+##  /member_illust.php?mode=medium&amp;illust_id=70896852 
+##  /member.php?id=3912079 
 ## 艦&lt;U+3053&gt;&lt;U+308C&gt;漫&lt;U+753B&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年8月)810 
 ##  /member_illust.php?mode=medium&amp;illust_id=70895822 
 ##  /member.php?id=34709596 
@@ -164,7 +158,13 @@ for(x in 1:9)
 ##  /member.php?id=8052985 
 ## 艦&lt;U+3053&gt;&lt;U+308C&gt;&lt;U+30EF&gt;&lt;U+30F3&gt;&lt;U+30C9&gt;&lt;U+30ED&gt;&lt;U+307E&gt;&lt;U+3068&gt;&lt;U+3081&gt;(2018年6月)810 
 ##  /member_illust.php?mode=medium&amp;illust_id=70895688 
-##  /member.php?id=34709596</code></pre>
+##  /member.php?id=34709596 
+## 雪風&lt;U+306E&gt;&lt;U+3068&gt;&lt;U+3082&gt;&lt;U+3060&gt;&lt;U+3061&gt;&lt;U+3072&gt;&lt;U+306A&gt;&lt;U+305F&gt; 
+##  /member_illust.php?mode=medium&amp;illust_id=70895126 
+##  /member.php?id=21902252 
+## 風雲(艦隊&lt;U+3053&gt;&lt;U+308C&gt;&lt;U+304F&gt;&lt;U+3057&gt;&lt;U+3087&gt;&lt;U+3093&gt;)20180926&lt;U+5F3E&gt;丸&lt;U+5036&gt;&lt;U+697D&gt;部 
+##  /member_illust.php?mode=medium&amp;illust_id=70894887 
+##  /member.php?id=23138175</code></pre>
 
 
 

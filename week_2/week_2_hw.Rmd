@@ -16,7 +16,7 @@ dat<- read_html(url)
 rdat<- html_nodes(dat, ".image-item")
 srdat<- html_attr(html_nodes(dat, ".image-item a"), 'href')
 ssrdat<- html_text(rdat)
-for(x in 1:9)
+for(x in 4:12)
 {
   cat(ssrdat[x], "\n", srdat[3*x-2], "\n",  srdat[3*x], "\n")
 }
