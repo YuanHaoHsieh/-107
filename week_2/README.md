@@ -1,20 +1,20 @@
-# �ǲ߱q����������
-1. �ǲ��˵�������l�X
-1. �ǲߧ�X�]�t��ƪ����T�s��
-1. �ǲ�R���Ϊ��򥻬[�c
-1. �ǲ߳B�z���X�����
+﻿# 學習從網路抓取資料
+1. 學習檢視網頁原始碼
+1. 學習找出包含資料的正確連結
+1. 學習R爬蟲的基本架構
+1. 學習處理爬出的資料
 
 ----
 
-# �ǲ�R MarkDown�g�@
-1. �ǲߦbR Studio�ظmR MarkDown�ɮ�
-1. �ǲ�MarkDown�g�@
-1. �ǲ߱NR MarkDown��s��html
-1. �ǲߦbGitHub�W�i�{html����
+# 學習R MarkDown寫作
+1. 學習在R Studio建置R MarkDown檔案
+1. 學習MarkDown寫作
+1. 學習將R MarkDown轉存為html
+1. 學習在GitHub上展現html網頁
 
 ----
 
-# �[���D OOXX
-1. �ǲߦh�h�P�_�j�骺�ϥ�
-1. �ǲ߳ӧQ����P�_
+# 加分題 OOXX
+1. 學習多層判斷迴圈的使用
+1. 學習勝利條件判斷
 

@@ -1,20 +1,20 @@
-# �ظm����
-1. �w��R�PR Studio
-1. �ǲߨϥ�R Studio
-1. �w��Git�P�Ы�GitHub�b��
-1. �ǲߧQ��Git�MGitHub�i���ɮ׺޲z�P����
+﻿# 建置環境
+1. 安裝R與R Studio
+1. 學習使用R Studio
+1. 安裝Git與創建GitHub帳號
+1. 學習利用Git和GitHub進行檔案管理與分享
 
 ----
 
-# �ǲ�R�y���򥻾ާ@
-1. �F��R�y���ɮ�����
-1. �ǲ߽հʤ��ظ�Ʈw
-1. �ǲ߰j��P�y�{����
-1. �ǲߥ�R�y���i��򥻹B��
+# 學習R語言基本操作
+1. 了解R語言檔案類型
+1. 學習調動內建資料庫
+1. 學習迴圈與流程控制
+1. 學習用R語言進行基本運算
 
 ----
 
-# �[���D �q�Ʀr
-1. �ǲ߱q�R�O�C��J���
-1. �ǲ߸�����������ഫ
+# 加分題 猜數字
+1. 學習從命令列輸入資料
+1. 學習資料類型間的轉換
 
