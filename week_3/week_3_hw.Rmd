@@ -27,7 +27,6 @@ avocadoatlantabig<- avocadoatlanta[which(avocadoatlanta$Total.Volume < 25000),]
 ```{r}
 mixeddata<- rbind(avocadoalbanybig, avocadoatlantabig)
 ```
-----
 ####  接著首先對兩地的酪梨平均價格分布作累積長條圖
 ####  (可見兩地酪梨價格分布最高點有些微差異)
 ```{r}
