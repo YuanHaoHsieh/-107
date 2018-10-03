@@ -1,0 +1,49 @@
+---
+title: "week_3_hw"
+output: html_document
+---
+####  首先載入ggplot2及目標檔案
+####  (他們是一堆酪梨的資訊)
+```{r}
+library(ggplot2)
+avocado<- read.csv("avocado.csv")
+```
+####  接著挑出特定產地的酪梨資訊
+####  (以Albany, Atlanta為例)
+```{r}
+avocadoalbany<- avocado[grep("Albany", avocado$region),]
+avocadoatlanta<- avocado[grep("Atlanta", avocado$region),]
+mixeddatax<- rbind(avocadoalbany, avocadoatlanta)
+ggplot(data = mixeddatax, aes(x = as.Date(Date), y = Total.Volume, group = region, color = region)) + geom_point() 
+```
+####  接著挑出我們想要的酪梨產量資訊
+####  (因為兩地酪梨產量分成了兩個明顯的群體，大致可用25000將兩者下半部分挑出)
+```{r}
+avocadoalbanybig<- avocadoalbany[which(avocadoalbany$Total.Volume < 25000),]
+avocadoatlantabig<- avocadoatlanta[which(avocadoatlanta$Total.Volume < 25000),]
+```
+####  接著將資料接合
+```{r}
+mixeddata<- rbind(avocadoalbanybig, avocadoatlantabig)
+```
+####  接著首先對兩地的酪梨平均價格分布作累積長條圖
+####  (可見兩地酪梨價格分布最高點有些微差異)
+```{r}
+ggplot(data = mixeddata, aes(x = AveragePrice)) + geom_bar(aes(fill = region), binwidth = 0.05)
+```
+####  接著對兩地的酪梨平均價格和產量作散布圖
+####  (可見兩地酪梨價格和產量略呈負相關)
+```{r}
+ggplot(data = mixeddata, aes(x = AveragePrice, y = Total.Volume, color = region)) + geom_point() + geom_smooth(method = 'lm')
+```
+####  接著對兩地的酪梨總產量和分裝袋數作散布圖
+####  (可見兩地酪梨總產量和分裝袋數呈明顯正相關)
+####  (我到底在說什麼廢話#)
+```{r}
+ggplot(data = mixeddata, aes(x = Total.Volume, y = Total.Bags, color = region)) + geom_point() + geom_smooth(method = 'lm')
+```
+####  最後作兩地酪梨產量的時序圖
+####  (可見產量逐漸上升，且Atlanta產量較多)
+```{r}
+ggplot(data = mixeddata, aes(x = as.Date(Date), y = Total.Volume, group = region, color = region)) + geom_line() 
+```
