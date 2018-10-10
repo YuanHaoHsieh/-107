@@ -1,14 +1,30 @@
+---
+title: "week_4_hw"
+output: html_document
+---
+##這是一個在PIXIV上對關鍵詞進行搜索，然後分析其搜尋結果的tag的文字雲
+####  首先載入必要套件包
+####  (包含爬蟲、文字雲、和一些合併表格之類的東東)
+```{r}
 library(rvest)
 library(xml2)
 library(wordcloud)
 library(RColorBrewer)
 library(plyr)
+```
+####  接著載入網址們
+####  (在搜尋頁面上用js(求助於人)挖出來的動態資料)
+```{r}
 urls<- readLines("url.txt")
 urls[1]<- "/member_illust.php?mode=medium&illust_id=71122433"
 urls[40]<- "/member_illust.php?mode=medium&illust_id=71119181"
 urls[79]<- "/member_illust.php?mode=medium&illust_id=71119079"
 urls[119]<- "/member_illust.php?mode=medium&illust_id=71115999"
 urls[120]<- "/member_illust.php?mode=medium&illust_id=71115982"
+```
+####  接著用一個迴圈挑出圖片的tag
+####  (搜尋結果會是一堆圖片的頁面，上面有tag)
+```{r}
 alltag<- data.frame()
 for(x in 1:120)
 {
@@ -19,7 +35,10 @@ for(x in 1:120)
   ssrdat<- as.data.frame(ssrdat)
   alltag<- rbind.fill(alltag, ssrdat)
 }
-
+```
+####  接著就有詞頻，然後就有文字雲了
+####  (文字雲基本上使用範例)
+```{r}
 freqFrame = as.data.frame(table(alltag))
 wordcloud(freqFrame$alltag,freqFrame$Freq,
           scale=c(5,0.5),min.freq=1,max.words=50,
@@ -27,3 +46,7 @@ wordcloud(freqFrame$alltag,freqFrame$Freq,
           rot.per=0, colors=brewer.pal(8, "Dark2"),
           ordered.colors=FALSE,use.r.layout=FALSE,
           fixed.asp=TRUE)
+```
+----
+####  接著可以分析結果了
+####  (從中我們可以看到最大的tag基本上就是我的搜尋關鍵詞，算是合情合理的結果，而其他幾個比較次級大小的tag則可以看出P站上的創作者們，近期都以什麼方向對這個主題進行創作)
